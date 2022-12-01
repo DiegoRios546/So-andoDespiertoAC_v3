@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+:root{
+    --rosa:#F244A4;
+    --rosa_claro: #F9CBE1;
+    --azul: #04B2D9;
+    --azul_claro: #A0E0F5;
+    --amarillo: #F2CC0C;
+    --amarillo_claro:#FDEBB9;
+    --box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+    --border:.2rem solid rgba(0,0,0,.1);
+    --outline:.1rem solid rgba(0,0,0,.1);
+    --outline-hover:.2rem solid var(--azul);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url(../img/fondo-azul.jpg);
+    background-color: var(--azul_claro);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.contenedor__todo{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.caja__trasera{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: rgba(4, 178, 217, 0.5);
+
+}
+
+.caja__trasera div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+
+.caja__trasera div p,
+.caja__trasera button{
+    margin-top: 30px;
+}
+
+.caja__trasera div h3{
+    font-weight: 370;
+    font-size: 25px;
+}
+
+.caja__trasera div p{
+    font-size: 14px;
+    font-weight: 270;
+}
+
+.caja__trasera button{
+    padding: 10px 40px;
+    border: 2px solid var(--azul_claro);
+    border-radius: .5rem;
+    font-size: 14px;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--azul_claro);
+    outline: none;
+    transition: all 300ms;
+}
+
+.caja__trasera button:hover{
+    background: var(--azul_claro);
+    color: #fff;
+}
+
+/*Formularios*/
+
+.contenedor__login-register{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+
+    /*La transicion va despues del codigo JS*/
+    transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
+
+.contenedor__login-register form{
+    width: 100%;
+    padding: 80px 20px;
+    background: white;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.contenedor__login-register form h2{
+    text-transform: uppercase;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--azul);
+}
+
+.contenedor__login-register form input{
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    background: #eee;
+    color: var(--azul);
+    font-size: 14px;
+    outline: none;
+}
+
+.contenedor__login-register form button{
+    margin-top: 30px;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #fff;
+    width: 9em;
+    height: 2.7em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg,var(--azul),var(--rosa),var(--amarillo),var(--azul));
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.contenedor__login-register form button:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+@keyframes ani {
+    0% {
+     background-position: 0%;
+    }
+   
+    100% {
+     background-position: 400%;
+    }
+}
+
+.contenedor__login-register form button:before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg,var(--azul),var(--rosa),var(--amarillo),var(--azul));
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.contenedor__login-register form button:hover::before{
+    filter: blur(20px);
+}
+
+.contenedor__login-register form button:active {
+    background: linear-gradient(32deg,var(--azul),var(--rosa),var(--amarillo),var(--azul));
+}
+
+.formulario__login{
+    opacity: 1;
+    display: block;
+}
+.formulario__register{
+    display: none;
+}
+
+.contenedor__login-register .formulario__login p{
+    font-size: 0.9rem;
+    padding: .3rem 0;
+    margin-top: 0.2rem;
+}
+
+.contenedor__login-register .formulario__login a{
+    color: var(--rosa);
+    text-decoration: none;
+}
+
+.contenedor__login-register .formulario__login a:hover{
+    color: var(--rosa);
+    text-decoration: underline;
+}
+
+
+
+@media screen and (max-width: 850px){
+
+    main{
+        margin-top: 50px;
+    }
+
+    .caja__trasera{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .caja__trasera div{
+        margin: 0px;
+        position: absolute;
+    }
+
+
+    /*Formularios*/
+
+    .contenedor__login-register{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .contenedor__login-register form{
+        position: relative;
+    }
+}

@@ -1,0 +1,39 @@
+.iconos button{
+
+    border-radius: 100px;
+    height: 4rem;
+    width: 4rem;
+    padding: .3rem;
+}
+.iconos img{
+    width: 100%;
+}
+.logo{
+    color: white;
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 1rem;
+   
+}
+.logo:hover{
+    text-decoration: none;
+    color: rgb(0, 0, 108);
+}
+.logo img{
+    width: 5rem;
+}
+.seccion-nuevo{
+    border: 2px solid black;
+    width: 40%;
+}
+.seccion-nuevo label{
+    margin: 1rem;
+    
+}
+.img{
+    width: 50%;
+    margin: 2rem;
+}
+.boton{
+    background-color: aqua;
+}
